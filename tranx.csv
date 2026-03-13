@@ -1,0 +1,4 @@
+Password,Transaction ID,Expense Type,Amount,Date
+123,1000,Food,500.0,2026-03-12
+123,1000,Deposit,1000.0,2026-03-12
+123,1000,Cloths,1000.0,2026-03-13
