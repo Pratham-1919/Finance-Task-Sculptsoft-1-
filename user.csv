@@ -1,2 +1,4 @@
-Name,Password,Initial balance,account_type
-Pratham,123,9000.0,savings
+Name,Password,Initial balance,account_type,Date,Last Update,principal,emi,remaining_months
+Pratham,124,15000,current,2026-03-18,2026-03-18,,,
+Pratham,123,11000.0,savings,2026-03-18,2026-03-18,,,
+Pratham,125,100000.0,loan,2026-03-18,2026-03-18,100000.0,10511.066411154236,10
