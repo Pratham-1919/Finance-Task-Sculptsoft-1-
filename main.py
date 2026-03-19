@@ -25,8 +25,9 @@ def main():
                         print("\n 4 get complete transaction history: ")
                         print("\n 5 Get monthly transaction report: ")
                         print("\n 6 Apply monthly interest (Savings only): ")
-                        print("\n 7 Apply monthly updates in current account: ")
-                        print("\n 8 Exit: ")
+                        print("\n 7 Pay EMI (Loan account only): ")
+                        print("\n 8 Get loan Summary: ")
+                        print("\n 9 Exit: ")
                         
                         option = input("Mention your choice: ")
                         if option == "4":
@@ -73,8 +74,20 @@ def main():
                                 print("Error: Interest can only be applied to a Savings account.")
 
                         elif option == "7":
-                            break
+                            account_type = user.get_account_type(validate)
+                            if account_type == "loan":
+                                payment_acc_type = input("Enter account type to deduct EMI from (savings/current): ").lower()
+                                payment_pwd = input("Enter the password for your " + payment_acc_type + " account: ")
+                                loan_acc = LoanAccount()
+                                loan_acc.pay_emi(validate, payment_pwd)
+                            else:
+                                print("Error: Option only valid for Loan accounts.")
                         
+                        elif option == "8":
+                            loan_acc = LoanAccount()
+                            loan_summary = loan_acc.loan_summary(validate)
+                            print(loan_summary)
+
                         else:
                             print("Invalid Input")
                             break

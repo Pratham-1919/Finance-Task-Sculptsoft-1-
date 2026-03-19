@@ -30,6 +30,7 @@ class User:
             next(reader)
             for row in reader:
                 if row[1].strip() == password.strip():
+                    print(f"This is your {row[3]} account")
                     return True
             else:
                 return False
